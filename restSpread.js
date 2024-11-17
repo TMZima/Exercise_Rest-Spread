@@ -35,9 +35,17 @@ const lionProfile = {
   species: "Lion",
 };
 // TODO: Duplicate an animal profile object using a shallow copy. Add genetic diversity information using the `genetics` property to this copy. Observe and explain how changes to nested properties affect both the original and the copied object.
+
+const lionGenetics = {
+  ...lionProfile,
+  genetics: "Diverse",
+};
+console.log("Original Lion Profile: ", lionProfile);
+console.log("Lion Genetics Profile: ", lionGenetics);
+
 /*
  * Observations:
- * TODO: Explain here.
+ * TODO: Modifying the nested property in the copied object does not affect the original object. However, modifying the nested property in the original object affects the copied object. This is because the spread operator performs a shallow copy, which only copies the top-level properties of the object. Changes to nested properties are shared between the original and copied objects.
  */
 
 /* Task 5: Analyze Ecosystem Health */
